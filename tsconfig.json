@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "components/steps/GitHubStep/index.js", "components/steps/TwitterStep/index.tsx", "components/steps/ChooseAvatarStep/index.js", "components/steps/EnterCodeStep/index.tsx", "components/steps/EnterNameStep/index.tsx", "components/steps/EnterPhoneStep/index.tsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
