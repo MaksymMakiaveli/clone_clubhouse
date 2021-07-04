@@ -1,5 +1,5 @@
 # Clone Clubhouse
-
+![wakatime](https://wakatime.com/badge/github/MaksymMakiaveli/clone_clubhouse.svg)
 ###  Stack
 Front-end
    * ReactJS/NextJS
