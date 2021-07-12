@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -21,9 +17,13 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "components/steps/GitHubStep/index.js", "components/steps/TwitterStep/index.tsx", "components/steps/ChooseAvatarStep/index.js", "components/steps/EnterCodeStep/index.tsx", "components/steps/EnterNameStep/index.tsx", "components/steps/EnterPhoneStep/index.tsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "components/steps/GitHubStep/index.js",
+    "components/steps/TwitterStep/index.tsx",
+    "components/steps/ChooseAvatarStep/index.js",
+    "components/steps/EnterCodeStep/index.tsx",
+    "components/steps/EnterNameStep/index.tsx",
+    "components/steps/EnterPhoneStep/index.tsx"
+  ],
+  "exclude": ["node_modules"]
 }
