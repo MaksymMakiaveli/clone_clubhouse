@@ -28,46 +28,40 @@ export const EnterCodeStep = () => {
     }
   };
   const onSubmit = async () => {
-    try {
-      setIsLoading(true);
-      await Axios.get('/todos');
-      router.push('/rooms');
-    } catch (error) {
-      alert('Error activation');
-    }
+    router.push('/rooms');
+
     setIsLoading(false);
   };
+
   return (
     <div className={styles.block}>
-      {!isLoading ? (
-        <>
-          <StepInfo icon='/static/numbers.png' title='Enter your activate code' />
-          <WhiteBlock className={clsx('m-auto mt-30', styles.whiteBlock)}>
-            <div className={clsx('mb-30', styles.codeInput)}>
-              {codes.map((code, index) => (
-                <input
-                  key={index}
-                  type='tel'
-                  placeholder='X'
-                  maxLength={1}
-                  id={String(index)}
-                  onChange={handleChangeInput}
-                  value={code}
-                />
-              ))}
-            </div>
-            <Button disabled={nextDisabled} onClick={onSubmit}>
-              Next
-              <img src='/static/arrow.svg' alt='' className='d-ib ml-10' />
-            </Button>
-          </WhiteBlock>
-        </>
-      ) : (
-        <div className='text-center'>
-          <div className='loader'></div>
-          <h3 className='mt-5'>Activation in progress ...</h3>
-        </div>
-      )}
+      <>
+        <StepInfo icon='/static/numbers.png' title='Enter your activate code' />
+        <WhiteBlock className={clsx('m-auto mt-30', styles.whiteBlock)}>
+          <div className={clsx('mb-30', styles.codeInput)}>
+            {codes.map((code, index) => (
+              <input
+                key={index}
+                type='tel'
+                placeholder='X'
+                maxLength={1}
+                id={String(index)}
+                onChange={handleChangeInput}
+                value={code}
+              />
+            ))}
+          </div>
+          <Button disabled={nextDisabled} onClick={onSubmit}>
+            Next
+            <img src='/static/arrow.svg' alt='' className='d-ib ml-10' />
+          </Button>
+        </WhiteBlock>
+      </>
+
+      {/* <div className='text-center'>
+        <div className='loader'></div>
+        <h3 className='mt-5'>Activation in progress ...</h3>
+      </div> */}
     </div>
   );
 };
