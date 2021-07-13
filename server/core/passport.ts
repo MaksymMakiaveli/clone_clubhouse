@@ -10,7 +10,10 @@ passport.use(
       callbackURL: 'http://localhost:3001/auth/github/callback',
     },
     (accessToken, refreshToken, profile, cb) => {
-      const user = {};
+      const user = {
+        fullname: profile.displayName,
+        avatarUrl: profile.photos?.[0].value,
+      };
       cb();
     },
   ),
