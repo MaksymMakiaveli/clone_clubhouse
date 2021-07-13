@@ -7,7 +7,7 @@ dotenv.config({
 
 import { passport } from './core/passport';
 
-const PORT = process.env.PORT ?? 3001;
+const PORT = 3001;
 const app = express();
 
 app.get('/auth/github', passport.authenticate('github'));
@@ -16,7 +16,7 @@ app.get(
   '/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function (req, res) {
-    res.redirect('/');
+    res.send();
   },
 );
 
